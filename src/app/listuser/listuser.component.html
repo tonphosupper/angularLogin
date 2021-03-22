@@ -1,0 +1,26 @@
+<p>listuser works!</p>
+<table style=" border-radius: inherit;">
+    <tr>
+        <td></td>
+        <td>ID</td>
+        <td>Email</td>
+        <td>Username</td>
+        <td>Pass</td>
+        <td>Role</td>
+        <td>Active</td>
+
+    </tr>
+    <tr *ngFor="let user of users">
+        <td></td>
+        <td>{{user.id}}</td>
+        <td>{{user.emailId}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.password}}</td>
+        <td>{{user.roles}}</td>
+        <br>
+        <td><a (click)="deleteUser(user.id)" class="text-danger">Delete</a></td>
+    </tr>
+</table>
+<br>
+<app-load-images></app-load-images>
+<button [routerLink]="['/animal']">Animals</button>

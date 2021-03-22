@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-sm bg-info navbar-dark">
+    <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link" [routerLink]="['/home']">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <button class="btn btn-info" style="color:rgb(16, 247, 235);" *ngIf="!service.isUserLoggedIn()" routerLink="/login">Login</button>
+        </li>
+        <li class="nav-item">
+            <button class="btn btn-info" style="color:rgba(118, 115, 128, 0.438);" *ngIf="service.isUserLoggedIn()" routerLink="/logout">Logout</button>
+        </li>
+    </ul>
+</nav>
+
+<router-outlet></router-outlet>

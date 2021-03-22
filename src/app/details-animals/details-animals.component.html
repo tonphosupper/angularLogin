@@ -1,0 +1,31 @@
+<h2 class="text-center">Update Animals</h2>
+<br>
+<div>
+    <form class="container" #updateform="ngForm" (ngSubmit)="updateAnimals()">
+
+        <div class="form-outline mb-4">
+            <input type="text" id="name" class="form-control" name="name" [(ngModel)]="animal.name">
+            <label class="form-label" for="name">Name</label>
+        </div>
+
+
+        <div class="form-outline mb-4">
+            <input type="text" id="active" class="form-control" name="active" [(ngModel)]="animal.active" />
+            <label class="form-label" for="active">Active</label>
+        </div>
+
+
+        <div class="form-outline mb-4">
+            <input type="text" id="bread" class="form-control" name="bread" [(ngModel)]="animal.bread" />
+            <label class="form-label" for="bread">Bread</label>
+        </div>
+
+        <div class="form-outline mb-4">
+            <input type="text" id="image" class="form-control" name="image" [(ngModel)]="animal.image" />
+            <label class="form-label" for="image">Image</label>
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-4">Sửa</button>
+    </form>
+</div>
